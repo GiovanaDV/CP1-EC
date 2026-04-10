@@ -5,11 +5,6 @@ def ao_conectar(client, userdata, flags, rc):
     print("Nos conectamos com o seguinte código de resultado {}".format((rc)))
     client.subscribe("giovana")
 
-'''
-<= 30 → perto → cheio
-<= 100 → médio → consumindo
-> 100 → longe → vazio
-'''
 def ao_receber(client, userdata, msg):
     mensagem = msg.payload.decode()
     print("Mensagem recebida:", mensagem)
